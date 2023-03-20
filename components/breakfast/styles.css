@@ -1,0 +1,37 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.cdnfonts.com/css/overdrive-sunset');
+@import url('https://fonts.cdnfonts.com/css/ikka-rounded');
+
+.socialMedia {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .fa {
+     padding: 20px;
+     font-size: 30px;
+     width: 50px;
+     text-align: center;
+     text-decoration: none;
+ }
+ 
+ /* Add a hover effect if you want */
+ .fa:hover {
+   opacity: 0.7;
+ }
+ 
+ /* Set a specific color for each brand */
+ 
+ /* Facebook */
+ .fa-facebook {
+   background: #3B5998;
+   color: white;
+ } 
+ 
+ /* Instagram */
+ .fa-instagram {
+   background: #a80c6c;
+   color: white;
+ }

@@ -1,5 +1,8 @@
 @import url('https://fonts.cdnfonts.com/css/overdrive-sunset');
 @import url('https://fonts.cdnfonts.com/css/ikka-rounded');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.cdnfonts.com/css/iphone-bohassson');
+
 * {
     box-sizing: border-box;
 }                
@@ -7,12 +10,51 @@
 body {
     margin: 2rem 2rem 0 2rem;
     padding: 0;
-    background-color: #545761 ;
+    background-image: url(./images/body3.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
 
 
 }
+
+/* social media buttons */
+
+.socialMedia {
+    
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+} 
+
+/* Instagram */
+.fa-instagram {
+  background: #a80c6c;
+  color: white;
+}
+/* social media buttons end */
+
+
 /* search bar */
 .input-search{
     height: 1rem;
@@ -33,6 +75,7 @@ body {
   width: fit-content;
   height: fit-content;
   float: right;
+  position: relative;
   
 }
 
@@ -43,12 +86,7 @@ body {
     font-weight: 100;
 }
 
-.input-search::placeholder{
-    color:rgba(255,255,255,.5);
-    font-size: 1.125rem;
-    letter-spacing: 0.125rem;
-    font-weight: 100;
-}
+
 .btn-search{
     width: 1rem;
     height: 1rem;
@@ -85,10 +123,10 @@ body {
 /* main */
 .container {
     margin: 2rem 2rem 0 2rem;
-    background-image: url(/images/gourmetica\ background.png);
+    background-image: url(./images/bkground2.jpg);
     border-radius: 2rem;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 200vh;
     
 
 }
@@ -96,10 +134,13 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(/images/logo.png);
+    background-image: url(/images/logoBun.png);
     width: 15rem;
     height: 15rem;
     background-size: cover;
+}
+.logo:hover {
+    cursor: pointer;
 }
 h1 {
     justify-content: center;
@@ -111,7 +152,7 @@ h1 {
 .navBar {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     font-family: 'Ikka Rounded', sans-serif;
     color: rgb(254, 254, 254);
@@ -122,10 +163,55 @@ h1 {
                                                 
 }
 ul:hover {
-    font-size: 110%;
+    font-size: 100%;
     cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+.navBar ul {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .navBar ul:hover::before,
+  .navBar ul:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    left: 2rem;
+    right: 2rem;
+  }
+  
+  .navBar ul:hover::before {
+    top: -2px;
+  }
+  
+  .navBar ul:hover::after {
+    bottom: -2px;
+  
+  }
+/* responsive navbar */
+  @media (max-width: 768px) {
+    .navBar {
+      flex-direction: column;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 1rem;
+    }
+  
+    .navBar ul {
+      margin-bottom: 1rem;
+    }
+    
+    .navBar ul:hover:before,
+    .navBar ul:hover:after {
+      width: 100%;
+    }
+  }
+/* responsive navbar */
 .secondSection {
     display: flex;
     flex-direction: row;
@@ -135,14 +221,28 @@ ul:hover {
 }
 
 .element {
-border-radius: 3rem;
-font-family: 'Overdrive Sunset', sans-serif;
-color: rgb(255, 255, 255);
-text-align: center;
-justify-content: center;
-
+    border-radius: 3rem;
+    font-family: 'Overdrive Sunset', sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.elementName {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.412);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
-
+.element:hover {
+    cursor: pointer;
+}
 .element:nth-child(1) {
     background-image: url(/images/breakfast.jpg);
     background-size: cover;
@@ -183,6 +283,53 @@ justify-content: center;
     height: 12rem;
     background-image: url(/images/burger.jpeg);
     background-position: center;
+}
+
+#ourStory {
+    color: white;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 7rem;
+}
+.ourStory {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+
+.ourStoryText {
+    width: 50%;
+    font-family: 'iPhone-BoHasssoN', sans-serif;
+}
+.ourStoryImg {
+    background-image: url(./images/logoBun.png);
+    background-size: cover;
+    /* justify-content: center; */
+    height: 20rem;
+    width: 20rem;
+    
+}
+
+#Recipes {
+    color: white;
+    font-size: large;
+}
+
+#tastySecrets {
+    color: white;
+    font-size: large;
+}
+
+#contactUs {
+    color: white;
+    font-size: large;
 }
 /* main end */
 
