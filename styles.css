@@ -27,7 +27,7 @@ body {
 }
 
 .fa {
-    padding: 20px;
+    padding: 1rem;
     font-size: 30px;
     width: 50px;
     text-align: center;
@@ -317,19 +317,40 @@ ul:hover {
     
 }
 
-#Recipes {
-    color: white;
-    font-size: large;
+#recipes {
+  color: white;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 7rem;
 }
 
 #tastySecrets {
-    color: white;
-    font-size: large;
+  color: white;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 7rem;
 }
 
-#contactUs {
-    color: white;
-    font-size: large;
+#contactUS {
+  color: white;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 7rem;
 }
 /* main end */
 
@@ -337,6 +358,7 @@ ul:hover {
 
 .intro {
     background: black;
+    background-image: url(./images/logoBun.png);
     position: fixed;
     top: 0;
     left: 0;
