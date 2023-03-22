@@ -26,7 +26,7 @@ elements.forEach(element => {
 // highlight box end
 
 // Nav Bar
-const navLinks = document.querySelectorAll('.navBar ul a');
+const navLinks = document.querySelectorAll('.navBar ul');
 
 navLinks.forEach(link => {
   link.addEventListener('click', (e) => {
@@ -35,5 +35,24 @@ navLinks.forEach(link => {
     section.scrollIntoView({ behavior: 'smooth' });
   });
 });
-
 // Nav bar end
+
+// recipe section
+
+// recipe section
+
+// contact form
+
+function sendEmail () {
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+}
