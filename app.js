@@ -46,13 +46,47 @@ navLinks.forEach(link => {
 function sendEmail () {
   Email.send({
     Host : "smtp.elasticemail.com",
-    Username : "username",
-    Password : "password",
-    To : 'them@website.com',
-    From : "you@isp.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
+    Username : "gourmetica.ro@gmail.com",
+    Password : "8E5A71F6B82D838EED24F1CB0C6AA998651D",
+    To : 'gourmetica.ro@gmail.com',
+    From :'gourmetica.ro@gmail.com',
+    Subject : "New Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+    + "<br> Email: " + document.getElementById("email").value
+    + "<br> Phone: " + document.getElementById("phone").value
+    + "<br> Message: " + document.getElementById("message").value
 }).then(
   message => alert(message)
 );
 }
+// contact form end
+// scroll to top button
+// Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+// scroll to top button end
+
+// contact form
+const openFormBtn = document.getElementById("open-form");
+const contactForm = document.getElementById("contact-form");
+
+openFormBtn.addEventListener("click", function() {
+  contactForm.classList.toggle("hide");
+});
+// contact form end
